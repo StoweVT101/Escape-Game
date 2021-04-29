@@ -1,0 +1,33 @@
+<html>
+<body>
+  <h1>Answer this question to get a clue for the final code!</h1>
+  <div>What's the fastest a horse can fun? Can you guess?</div>
+   
+      	<label for="guess">My Guess</label>
+      	<input type="number" id="guess">
+      	<input type="submit" id="submitGuess" value="Check My Guess" onclick=checkGuess()>
+      	
+      	<p id="feedback"></p>
+      	
+<img src="https://bestanimations.com/media/horses/1381888466amazing-horse-gif-25.gif"alt="Horses Running" style="width:400px;height:228px;">
+      	
+<script>
+  const speedOfHorse = 55
+  console.log('speedOfHorse', speedOfHorse)
+ 
+  function checkGuess() {
+  let myGuess = guess.value
+  console.log('My Guess',myGuess)
+  
+  if (myGuess == speedOfHorse) {
+    document.getElementById("feedback").innerHTML = 'You got it right! Your clue is the #2. Good luck!!';
+  }
+  else if (myGuess > speedOfHorse) {
+    document.getElementById("feedback").innerHTML ='Too high, guess again!';
+  }
+  else if (myGuess < speedOfHorse){
+    document.getElementById("feedback").innerHTML ='Too low, guess again!';
+  }
+}
+</script>
+</html>
