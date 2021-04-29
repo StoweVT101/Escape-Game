@@ -1,0 +1,33 @@
+<html>
+<body>
+  <h1>Answer this question to get a clue for the final code!</h1>
+  <div>The moisture content of hay bales should not be greater than what number? Can you guess?</div>
+   
+      	<label for="guess">My Guess</label>
+      	<input type="number" id="guess">
+      	<input type="submit" id="submitGuess" value="Check My Guess" onclick=checkGuess()>
+      	
+      	<p id="feedback"></p>
+      	
+<img src="https://bestanimations.com/media/horses/1381888466amazing-horse-gif-25.gif"alt="Horses Running" style="width:400px;height:228px;">
+      	
+<script>
+  const moistureContent = 22
+  console.log('moistureContent', moistureContent)
+ 
+  function checkGuess() {
+  let myGuess = guess.value
+  console.log('My Guess',myGuess)
+  
+  if (myGuess == moistureContent) {
+    document.getElementById("feedback").innerHTML = 'You got it right! Your clue is the #0. Good luck!!';
+  }
+  else if (myGuess > moistureContent) {
+    document.getElementById("feedback").innerHTML ='Too high, guess again!';
+  }
+  else if (myGuess < moistureContent){
+    document.getElementById("feedback").innerHTML ='Too low, guess again!';
+  }
+}
+</script>
+</html>
