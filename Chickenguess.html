@@ -1,0 +1,31 @@
+<html><title>Escape Room Facts and Hints</title>
+<body>
+    <script>
+    var number = 0;
+    
+    function guessCheck(){
+        var myguess = document.getElementById("guess").value;
+        if (myguess == number) {
+           document.getElementById("feedback").innerHTML="You guessed correct! By the way, the world record for number of eggs laid by a hen in a day is 7. Hint: 4";
+        }
+        else if (myguess > number) {
+            document.getElementById("feedback").innerHTML="Guess is too high. Try again.";
+        }
+        else if (myguess < number) {
+            document.getElementById("feedback").innerHTML="Guess is too low. Try again.";
+        }  
+
+    }
+</script>
+<p>What is the world record for number of eggs laid in a day by a rooster?</p>
+   
+<label for="guess">My Guess</label>
+<input type="number" id="guess">
+<input type="submit" id="submitGuess" value="Check My Guess" onclick="guessCheck()">
+   
+<p id="feedback"></p>
+            
+</body>
+
+
+</html>
