@@ -1,33 +1,69 @@
 <html>
 <body>
-  <h1>Answer this question to get a clue for the final code!</h1>
-  <div>The moisture content of hay bales should not be greater than what number? Can you guess?</div>
    
-      	<label for="guess">My Guess</label>
-      	<input type="number" id="guess">
-      	<input type="submit" id="submitGuess" value="Check My Guess" onclick=checkGuess()>
-      	
-      	<p id="feedback"></p>
-      	
-<img src="https://bestanimations.com/media/horses/1381888466amazing-horse-gif-25.gif"alt="Horses Running" style="width:400px;height:228px;">
-      	
-<script>
-  const moistureContent = 22
-  console.log('moistureContent', moistureContent)
- 
-  function checkGuess() {
-  let myGuess = guess.value
-  console.log('My Guess',myGuess)
-  
-  if (myGuess == moistureContent) {
-    document.getElementById("feedback").innerHTML = 'You got it right! Your clue is the #0. Good luck!!';
-  }
-  else if (myGuess > moistureContent) {
-    document.getElementById("feedback").innerHTML ='Too high, guess again!';
-  }
-  else if (myGuess < moistureContent){
-    document.getElementById("feedback").innerHTML ='Too low, guess again!';
-  }
+    <style>
+        .hidden {
+            visibility: hidden;
+        }
+       
+        .show {
+            visibility: visible;
+        }
+    </style>
+   
+    <script>
+    var number = 22;
+   
+    function guessCheck(){
+        var myguess = document.getElementById("guess").value;
+        if (myguess == number) {
+           document.getElementById("feedback").innerHTML="You guessed correct! Fun fact: The average thousand-pound horse who relies on hay for all their forage typically eats fifteen to twenty pounds of hay per day. Most hay is dispensed in flakes; however, the amount of hay in a flake can vary greatly, depending on the size of the flake and the kind of hay. Hint: 0";
+            document.getElementById('link').classList.toggle("hidden")
+        }
+        else if (myguess > number) {
+            document.getElementById("feedback").innerHTML="Guess is too high. Try again.";
+        }
+        else if (myguess < number) {
+            document.getElementById("feedback").innerHTML="Guess is too low. Try again.";
+        }
+
+    }
+    
+    function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            alert('Game Over! Sorry, you died! Please return to the start page if you would like to try again. ');
+        }
+    }, 1000);
 }
-</script>
+
+window.onload = function () {
+//this is where you can modifies the time amount.
+    var threeminutes = 60 * 3,
+        display = document.querySelector('#time');
+    startTimer(threeminutes, display);
+};
+    </script>
+    
+<p>What is the average moisture content for hay bales?</p>
+   
+<label for="guess">My Guess</label>
+<input type="number" id="guess">
+<input type="submit" id="submitGuess" value="Check My Guess" onclick="guessCheck()">
+<a id="link" href="horsestable.html" class="hidden">Enter the next room.</a>
+
+<p id="feedback"></p>
+
+    <div>YOUR CHANCE TO ESCAPE ENDS IN <span id="time">3:00</span> MINUTES</div>
+           
+</body>
 </html>
