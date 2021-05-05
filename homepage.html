@@ -1,7 +1,6 @@
 <html>
     <title style="color:white">You're Trapped!</title>
-   <center>
-    
+<br><br><br><br><br><br>
     <head> 
         <style>
         body {
@@ -11,30 +10,55 @@
             background-position: center;
             background-size: cover;
             font-family: Copperplate, Papyrus, fantasy;
+            background-color: white;
           }
         .button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 20px 40px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-font-size: 30px;
-}
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-size: 30px;
+        }
+        .centerIt {
+            margin: 0;
+            width: 700px;
+            text-align: center;
+             position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
+        }
+            .right {
+                float: right;
+            }
+            h1 {
+                color: white;
+            }
+            p {
+                color: white;
+            }
+            a {
+                color: white;
+            }
         </style>
     </head>
 
-<body style="color:white">
+<body>
     <img src=skeleton.gif style="height:300px;width:300px;">
-    <h1>You're trapped in a barn and you need to escape!</h1>
-    <p>Welcome to our barn escape room! Navigate through the areas and answer the questions correctly to obtain clues that will help you break out!</p> <p>Click the button above to begin your journey.</p>
-    <p>Note: Make sure to write the clues down! Once you go through a room you will not be able to return!</p>
-        <p>Enter when you are ready and remember to have fun!</p>
-    <a href="Chickenguess.html" class="button">START</a>
+    <div class="centerIt">
+        <h1 style="background-color:#4CAF50;">You're trapped in a barn and you need to escape!</h1>
+        <p style="background-color:#4CAF50;">Welcome to our barn escape room! Navigate through the areas and answer the questions correctly to obtain clues that will help you break out. <br>Click the button below to begin your journey. Enter when you are ready and remember to have fun! <br>Note: Make sure to write the clues down! Once you go through a room you will not be able to return.</p> 
+        <a href="Chickenguess.html" class="button">START</a>
+    </div>
+    <div class="right">
+        <img src=skeleton.gif style="height:300px;width:300px;">
+    </div>
 </body>
-    </center>
 </html>
