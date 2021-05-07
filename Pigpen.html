@@ -1,0 +1,50 @@
+<html><title>Escape Room Facts and Hints</title>
+    <head>
+   <style>
+        .hidden {
+            visibility: hidden;
+        }
+        
+        .show {
+            visibility: visible;}
+        body {font-family: Copperplate, Papyrus, fantasy;
+            }
+        }
+    </style>
+    </head>
+<body>
+    <script>
+    var number = 46;
+    
+    function guessCheck(){
+        var myguess = document.getElementById("guess").value;
+        if (myguess == number) {
+           document.getElementById("feedback").innerHTML="You guessed correct! Hint: 2";
+            document.getElementById('link').classList.toggle("hidden")
+
+        
+        }
+        else if (myguess > number) {
+            document.getElementById("feedback").innerHTML="Guess is too high. Try again.";
+        }
+        else if (myguess < number) {
+            document.getElementById("feedback").innerHTML="Guess is too low. Try again.";
+        }  
+
+    }
+    
+</script>
+<br><br><br><br><br><br><br><br><br><br><br>
+<center>
+<p>How many piglets were used to play Wilbur in Charlotte's Web?</p>
+   
+<label for="guess">My Guess:</label>
+<input type="number" id="guess">
+<input type="submit" id="submitGuess" value="Check My Guess" onclick="guessCheck()">
+<p id="feedback"></p>
+<a id="link" href="horseClue.html" class="hidden">Enter the next room.</a>   
+    </center>
+</body>
+
+
+</html>

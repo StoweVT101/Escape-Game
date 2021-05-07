@@ -1,4 +1,18 @@
-<html><title>Escape Room Facts and Hints</title>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Escape Room Facts and Hints</title>
+    <style>
+        .hidden {
+            visibility: hidden;
+        }
+        .show {
+            visibility: visible;
+        }
+        body {font-family: Copperplate, Papyrus, fantasy;}
+    </style>
+    </head>
+    
 <body>
     <script>
     var number = 0;
@@ -7,6 +21,7 @@
         var myguess = document.getElementById("guess").value;
         if (myguess == number) {
            document.getElementById("feedback").innerHTML="You guessed correct! By the way, the world record for number of eggs laid by a hen in a day is 7. Hint: 4";
+             document.getElementById('link').classList.toggle("hidden")
         }
         else if (myguess > number) {
             document.getElementById("feedback").innerHTML="Guess is too high. Try again.";
@@ -17,14 +32,17 @@
 
     }
 </script>
+<center>
+<br><br><br><br><br><br><br><br><br><br><br>
 <p>What is the world record for number of eggs laid in a day by a rooster?</p>
    
-<label for="guess">My Guess</label>
+<label for="guess">Guess Here:</label>
 <input type="number" id="guess">
-<input type="submit" id="submitGuess" value="Check My Guess" onclick="guessCheck()">
-   
+<input type="submit" id="submitGuess" value="Check Guess" onclick="guessCheck()">
+  <br>
+<a id="link" href="Pigpen.html" class="hidden">Enter the next room.</a>
 <p id="feedback"></p>
-            
+    </center>
 </body>
 
 
