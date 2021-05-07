@@ -1,7 +1,5 @@
 <html>
-<body>
-   
-    <style>
+    <head> <style>
         .hidden {
             visibility: hidden;
         }
@@ -9,15 +7,21 @@
         .show {
             visibility: visible;
         }
+        body {font-family: Copperplate, Papyrus, fantasy;
+        }
     </style>
-   
+    </head>
+<body>
+<center>
+
+   <br><br><br><br><br><br>
     <script>
     var number = 22;
    
     function guessCheck(){
         var myguess = document.getElementById("guess").value;
         if (myguess == number) {
-           document.getElementById("feedback").innerHTML="You guessed correct! Fun fact: The average thousand-pound horse who relies on hay for all their forage typically eats fifteen to twenty pounds of hay per day. Most hay is dispensed in flakes; however, the amount of hay in a flake can vary greatly, depending on the size of the flake and the kind of hay. Hint: 0";
+           document.getElementById("feedback").innerHTML="You guessed correct! <br> Fun fact: The average thousand-pound horse who relies on hay for all their forage typically eats fifteen to twenty pounds of hay per day. <br> Most hay is dispensed in flakes; however, the amount of hay in a flake can vary greatly, depending on the size of the flake and the kind of hay. <br> Hint: 0";
             document.getElementById('link').classList.toggle("hidden")
         }
         else if (myguess > number) {
@@ -59,11 +63,12 @@ window.onload = function () {
 <label for="guess">My Guess</label>
 <input type="number" id="guess">
 <input type="submit" id="submitGuess" value="Check My Guess" onclick="guessCheck()">
+    <br>
 <a id="link" href="horsestable.html" class="hidden">Enter the next room.</a>
 
 <p id="feedback"></p>
-
+<br><br>
     <div>YOUR CHANCE TO ESCAPE ENDS IN <span id="time">3:00</span> MINUTES</div>
-           
+</center>
 </body>
 </html>
