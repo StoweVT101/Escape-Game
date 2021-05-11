@@ -29,7 +29,20 @@
         }  
 
     }
-    
+    var countDown = 181
+
+function myFunction() {
+  location.href = '_____.html';
+ }
+ 
+var x = setInterval(function() {
+
+countDown = countDown - 1
+   
+  if (countDown == 0) {
+  myFunction();
+  }
+}, 1000);
 </script>
 <p>How many piglets were used to play Wilbur in Charlotte's Web?</p>
    
@@ -39,6 +52,7 @@
    
 <p id="feedback"></p>
 <a id="link" href="Chickenguess.html" class="hidden">Enter the next room.</a>   
+<p id="demo"></p>
 
 </body>
 
