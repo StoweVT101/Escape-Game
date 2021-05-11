@@ -18,6 +18,7 @@
       	<input type="submit" id="submitGuess" value="Check Guess" onclick=checkGuess()>
       	
       	<p id="feedback"></p>
+    <p id="demo"></p>
       	
 <img src="https://bestanimations.com/media/horses/1381888466amazing-horse-gif-25.gif"alt="Horses Running" style="width:400px;height:228px;">
       	
@@ -39,7 +40,22 @@
     document.getElementById("feedback").innerHTML ='Too low, guess again!';
   }
 }
+    var countDown = 181
+
+function myFunction() {
+  location.href = '_____.html';
+ }
+ 
+var x = setInterval(function() {
+
+countDown = countDown - 1
+   
+  if (countDown == 0) {
+  myFunction();
+  }
+}, 1000);
 </script>
 </body>
     </center>
 </html>
+
