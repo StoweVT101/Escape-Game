@@ -32,12 +32,25 @@
         }  
 
     }
-    
+    var countDown = 181
+
+function myFunction() {
+  location.href = '_____.html';
+ }
+ 
+var x = setInterval(function() {
+
+countDown = countDown - 1
+   
+  if (countDown == 0) {
+  myFunction();
+  }
+}, 1000);
 </script>
 <br><br><br><br><br><br><br><br><br><br><br>
 <center>
 <p>How many piglets were used to play Wilbur in Charlotte's Web?</p>
-   
+  <p id="demo"></p> 
 <label for="guess">My Guess:</label>
 <input type="number" id="guess">
 <input type="submit" id="submitGuess" value="Check My Guess" onclick="guessCheck()">
