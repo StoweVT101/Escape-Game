@@ -2,7 +2,10 @@
     <head>
         
     <style>
-    body {font-family: Copperplate, Papyrus, fantasy;
+        .hidden {
+            visibility: hidden;
+        }
+        body {font-family: Copperplate, Papyrus, fantasy;
         }
     </style>
     
@@ -19,6 +22,10 @@
       	
       	<p id="feedback"></p>
     <p id="demo"></p>
+    
+    <a id="link" href="horsestable.html" class="hidden">Enter the next room.</a>
+<p id="feedback"></p>
+    
 <p>The three minute timer starts now! Solve the clue in time. Or else...</p>
     <img style="height:200px;width:400px;" src="https://i2.wp.com/25.media.tumblr.com/1c5f5c89d7472d8f26f8c347d8ca6fb4/tumblr_mh3caom29X1rv4w8oo1_500.gif" >
  
@@ -33,6 +40,7 @@
   
   if (myGuess == mositureContent) {
     document.getElementById("feedback").innerHTML = 'You got it right! Your clue is the #2. Good luck!!';
+      document.getElementById('link').classList.toggle("hidden")
   }
       else if (myGuess > mositureContent) {
     document.getElementById("feedback").innerHTML ='Too high, guess again!';
