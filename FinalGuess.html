@@ -28,6 +28,20 @@
         }
 
     }
+       var countDown = 181
+
+function myFunction() {
+  location.href = '_____.html';
+ }
+ 
+var x = setInterval(function() {
+
+countDown = countDown - 1
+   
+  if (countDown == 0) {
+  myFunction();
+  }
+}, 1000);
    
     </script>
     
@@ -39,6 +53,7 @@
 <a id="link" href="FinalPage.html" class="hidden">Click Here!!</a>
 
 <p id="feedback"></p>
-
+<p id="demo"></p>
 </body>
 </html>
+
