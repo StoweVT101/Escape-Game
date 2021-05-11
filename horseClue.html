@@ -1,61 +1,66 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        
+<head>
+    <title>Room 4: Horse Clue</title>
     <style>
-    body {font-family: Copperplate, Papyrus, fantasy;
+        .hidden {
+            visibility: hidden;
         }
+        .show {
+            visibility: visible;
+        }
+        body {font-family: Copperplate, Papyrus, fantasy;}
     </style>
-    
     </head>
-<center> 
+    
 <body>
-  <p>Answer this question to get a clue for the final code!</p>
-  <div>What's the fastest a horse can run in mph?</div>
-   
-      	<label for="guess">Guess Here:</label>
-      	<input type="number" id="guess">
-      	<input type="submit" id="submitGuess" value="Check Guess" onclick=checkGuess()>
-      	
-      	<p id="feedback"></p>
-    <p id="demo"></p>
-      	
-<img src="https://bestanimations.com/media/horses/1381888466amazing-horse-gif-25.gif"alt="Horses Running" style="width:400px;height:228px;">
-<p>The three minute timer starts now! Solve the clue in time. Or else...</p>
-    <img style="height:200px;width:400px;" src="https://i2.wp.com/25.media.tumblr.com/1c5f5c89d7472d8f26f8c347d8ca6fb4/tumblr_mh3caom29X1rv4w8oo1_500.gif" >
-<script>
-  const speedOfHorse = 55
-  console.log('speedOfHorse', speedOfHorse)
- 
-  function checkGuess() {
-  let myGuess = guess.value
-  console.log('My Guess',myGuess)
-  
-  if (myGuess == speedOfHorse) {
-    document.getElementById("feedback").innerHTML = 'You got it right! Your clue is the #2. Good luck!!';
-  }
-  else if (myGuess > speedOfHorse) {
-    document.getElementById("feedback").innerHTML ='Too high, guess again!';
-  }
-  else if (myGuess < speedOfHorse){
-    document.getElementById("feedback").innerHTML ='Too low, guess again!';
-  }
-}
+    <script>
+    var number = 55;
+    
+    function guessCheck(){
+        var myguess = document.getElementById("guess").value;
+        if (myguess == number) {
+           document.getElementById("feedback").innerHTML="You guessed correct! Fun fact: Thoroughbred. With a top speed of 70.76 kilometers per hour, Thoroughbreds is the fastest horse breed in the world.Hint: #2";
+             document.getElementById('link').classList.toggle("hidden")
+        }
+        else if (myguess > number) {
+            document.getElementById("feedback").innerHTML="Guess is too high. Try again.";
+        }
+        else if (myguess < number) {
+            document.getElementById("feedback").innerHTML="Guess is too low. Try again.";
+        }  
+
+    }
+        
     var countDown = 181
-
-function myFunction() {
-  location.href = '_____.html';
- }
+    function myFunction() {
+     location.href = 'lose.html';
+    }
  
-var x = setInterval(function() {
+    var x = setInterval(function() {
 
-countDown = countDown - 1
+    countDown = countDown - 1
    
-  if (countDown == 0) {
-  myFunction();
+      if (countDown == 0) {
+     myFunction();
   }
 }, 1000);
 </script>
-</body>
+<center>
+<br><br><br><br><br><br><br>
+<p>What is the fastest a horse can run?</p>
+ <p id="demo"></p>  
+<label for="guess">Guess Here:</label>
+<input type="number" id="guess">
+<input type="submit" id="submitGuess" value="Check Guess" onclick="guessCheck()">
+  <br>
+<a id="link" href="keylockingimg.html" class="hidden">Enter the next room.</a>
+<p id="feedback"></p>
+<p>The three minute timer starts now! Solve the clue in time. Or be prepared for an unwanted end...</p>
+<br><br>
+    <img style="height:200px;width:400px;" src="https://i2.wp.com/25.media.tumblr.com/1c5f5c89d7472d8f26f8c347d8ca6fb4/tumblr_mh3caom29X1rv4w8oo1_500.gif" >
     </center>
-</html>
+</body>
 
+
+</html>
