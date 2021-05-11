@@ -33,32 +33,24 @@
 
     }
     
-    function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10)
-        seconds = parseInt(timer % 60, 10);
+   var countDown = 181
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
+function myFunction() {
+  location.href = '_____.html';
+ }
+ 
+var x = setInterval(function() {
 
-        display.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            alert('Game Over! Sorry, you died! Please return to the start page if you would like to try again. ');
-        }
-    }, 1000);
-}
-
-window.onload = function () {
-//this is where you can modifies the time amount.
-    var threeminutes = 60 * 3,
-        display = document.querySelector('#time');
-    startTimer(threeminutes, display);
-};
+countDown = countDown - 1
+   
+  if (countDown == 0) {
+  myFunction();
+  }
+}, 1000);
     </script>
     
 <p>What is the average moisture content for hay bales?</p>
+    <p id="demo"></p>
    
 <label for="guess">My Guess</label>
 <input type="number" id="guess">
@@ -66,9 +58,11 @@ window.onload = function () {
     <br>
 <a id="link" href="horsestable.html" class="hidden">Enter the next room.</a>
 
-<p id="feedback"></p>
 <br><br>
-    <div>YOUR CHANCE TO ESCAPE ENDS IN <span id="time">3:00</span> MINUTES</div>
+    <img src="https://i2.wp.com/25.media.tumblr.com/1c5f5c89d7472d8f26f8c347d8ca6fb4/tumblr_mh3caom29X1rv4w8oo1_500.gif" 
 </center>
 </body>
 </html>
+
+
+
