@@ -20,7 +20,7 @@
     function guessCheck(){
         var myguess = document.getElementById("guess").value;
         if (myguess == number) {
-           document.getElementById("feedback").innerHTML="You guessed correct! Fun fact: Thoroughbred. With a top speed of 70.76 kilometers per hour, Thoroughbreds is the fastest horse breed in the world.Hint: #2";
+           document.getElementById("feedback").innerHTML="You guessed correct! Fun fact: Thoroughbreds is the fastest horse breed in the world. Hint: #0";
              document.getElementById('link').classList.toggle("hidden")
         }
         else if (myguess > number) {
@@ -48,7 +48,7 @@
 </script>
 <center>
 <br><br><br><br><br><br><br>
-<p>What is the fastest a horse can run?</p>
+<p>What is the fastest a horse can run in mph?</p>
  <p id="demo"></p>  
 <label for="guess">Guess Here:</label>
 <input type="number" id="guess">
